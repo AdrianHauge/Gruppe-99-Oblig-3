@@ -3,36 +3,26 @@ package no.hvl.dat100.jplab11.oppgave2;
 import no.hvl.dat100.jplab11.common.TODO;
 
 public class Bilde extends Tekst {
+        private String url;
 
-	// TODO - objekt variable
-	
-	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
-	}
+        public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
+            super(id, bruker, dato, likes, tekst);
+            this.url = url;
+        }
+        
+//public get/set metoder for bilde klassen
+        
+        public String getUrl() {
+            return url;
+        }
 
-	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
-	}
-	
-	public String getUrl() {
-		throw new UnsupportedOperationException(TODO.method());
+        public void setUrl(String url) {
+            this.url = url;
+        }
 
-	}
-
-	public void setUrl(String url) {
-		throw new UnsupportedOperationException(TODO.method());
-	}
-
-	@Override
-	public String toString() {
-		throw new UnsupportedOperationException(TODO.method ());
-
-	}
-
-	// Metoden nedenfor er kun for valgfri oppgave 6
-	public String toHTML() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-				
-	}
+        public String toString() {
+             return "BILDE" + "\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "net Bildet\n" + getUrl() + "\n";
+        }
 }
+        
+
