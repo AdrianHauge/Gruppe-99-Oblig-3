@@ -6,17 +6,16 @@ import javax.swing.JOptionPane;
 import java.io.File;
 import no.hvl.dat100.jplab11.oppgave3.*;
 
-
 public class SkrivBlogg {
 
-	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/jplab12/tests/";
-		
+	private static String mappe = System.getProperty("user.dir") + "/src/no/hvl/dat100/jplab12/tests/";
+	
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
 
 		String fil = filnavn;
 		
 		try {
-		File file = new File(MAPPE+fil);
+		File file = new File(mappe+fil);
 		PrintWriter skriver = new PrintWriter(file);
 		
 		skriver.println(samling.toString());
@@ -28,5 +27,6 @@ public class SkrivBlogg {
 			JOptionPane.showMessageDialog(null, "Filen finnes ikke.");
 			return false;
 		}
+		
 	}
 }

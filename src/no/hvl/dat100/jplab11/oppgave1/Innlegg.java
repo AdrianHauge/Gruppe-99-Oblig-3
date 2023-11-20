@@ -4,89 +4,79 @@ import no.hvl.dat100.jplab11.common.TODO;
 
 public abstract class Innlegg {
 	
-	private int id;
-	private String bruker;
-	private String dato;
-	private int likes;
+	// TODO - deklarering av objektvariable
 	
-	public Innlegg() {
+		private int id;
+		private String bruker;
+		private String dato;
+		private int likes;
 		
-	}
-	
-	public Innlegg(int id, String bruker, String dato) {
+		public Innlegg() {
+			
+		}
+		
+		public Innlegg(int id, String bruker, String dato) {
 
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = 0;
-	}
+			// TODO
+			this.id = id;
+			this.bruker = bruker;
+			this.dato = dato;
+			this.likes = 0;
+		}
 
-	public Innlegg(int id, String bruker, String dato, int likes) {
+		public Innlegg(int id, String bruker, String dato, int likes) {
 
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = likes;
-	}
-	
-	public String getBruker() {
+			// TODO - START
+			this.id = id;
+			this.bruker = bruker;
+			this.dato = dato;
+			this.likes = likes;
+		}
 		
-		return bruker;
+		public String getBruker() {
+			return bruker;
 
-	}
+		}
 
-	public void setBruker(String bruker) {
-		
-		this.bruker = bruker;
-	}
+		public void setBruker(String bruker) {
+			this.bruker = bruker;
+		}
 
-	public String getDato() {
-		
-		return dato;
-		
-	}
+		public String getDato() {
+			return dato;
+		}
 
-	public void setDato(String dato) {
-		
-		this.dato = dato;
-	}
+		public void setDato(String dato) {
+			this.dato = dato;
+		}
 
-	public int getId() {
-		
-		return id;
+		public int getId() {
+			return id;
+		}
 
-	}
-
-	public int getLikes() {
+		public int getLikes() {
+			return likes;
+		}
 		
-		return id;
-
-	}
-	
-	public void doLike () {
+		public void doLike () {
+			this.likes++; 
+		}
 		
-		this.likes++;
-	}
-	
-	public boolean erLik(Innlegg innlegg) {
+		public boolean erLik(Innlegg innlegg) {
+			return this.id == innlegg.id;
+		}
 		
-		return this.id == innlegg.id;
-
-	}
-	
-	@Override
-	public String toString() {
+		@Override
+		public String toString() {
+			
+			String tekst = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
+			return tekst;
+		}
 		
-		String tekst = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
-		
-		return tekst;
-				
+		// Metoden nedenfor er kun for valgfri oppgave 6
+		public String toHTML() {
+			
+			throw new UnsupportedOperationException(TODO.method());
+					
+		}
 	}
-	
-	// Metoden nedenfor er kun for valgfri oppgave 6
-	public String toHTML() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-				
-	}
-}
