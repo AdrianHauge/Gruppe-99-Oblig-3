@@ -68,11 +68,10 @@ public abstract class Innlegg {
 		
 		@Override
 		public String toString() {
-			    return "TEKST\n" + getId() + "\n" + "\n" + getDato() + "\n" + getLikes() + "\n";
-			}
-			
-//			String tekst = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
-//			return tekst;
+			    
+			String tekst = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
+			return tekst;
+		}
 		
 		// Metoden nedenfor er kun for valgfri oppgave 6
 		public String toHTML() {
